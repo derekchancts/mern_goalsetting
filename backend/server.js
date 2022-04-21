@@ -17,7 +17,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
-app.use(errorHandler)
+app.use(errorHandler)  // custom error handler
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
